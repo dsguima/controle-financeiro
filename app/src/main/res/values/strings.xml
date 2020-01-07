@@ -2,10 +2,7 @@
     <string name="app_name">Controle Financeiro</string>
     <string name="loading">Carregando...</string>
     <string name="campo_obrigatorio">Campo obrigatório!</string>
-
     <string name="salvar">Salvar</string>
-
-    <!-- Geral -->
     <string name="despesa">Despesa</string>
     <string name="descricao">Descrição</string>
     <string name="valor">Valor</string>
@@ -13,5 +10,4 @@
     <string name="spinner_conta_erro">Selecione uma conta</string>
     <string name="spinner_responsavel_erro">Selecione um responsável</string>
     <string name="spinner_mes_erro">Selecione um mês</string>
-    
 </resources>
