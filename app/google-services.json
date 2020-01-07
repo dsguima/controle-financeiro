@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "46642302239",
+    "firebase_url": "https://controle-financeiro-9a531.firebaseio.com",
+    "project_id": "controle-financeiro-9a531",
+    "storage_bucket": "controle-financeiro-9a531.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46642302239:android:049d20dfd91086a1faf42a",
+        "android_client_info": {
+          "package_name": "br.com.controlefinanceiro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46642302239-2buo2i32jcfeip9ikd7cs5fqs660qi6h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAR7PYTv89Md752gDSph7zmZ3H5mdSvqv4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46642302239-2buo2i32jcfeip9ikd7cs5fqs660qi6h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
