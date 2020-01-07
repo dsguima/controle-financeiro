@@ -14,7 +14,6 @@ public abstract class BaseRepository<T> {
 
     private String collection;
     protected FirebaseFirestore db;
-    //public T object;
     private Class<T> clazz;
 
     /**
@@ -36,33 +35,7 @@ public abstract class BaseRepository<T> {
      * @throws Exception
      */
     public Task<QuerySnapshot> getAll() throws Exception {
-        return db.collection(collection)
-                //.whereEqualTo()
-                .get();
-    }
-
-    public Task<QuerySnapshot> getAll(String campo, Object valor) throws Exception {
-        return db.collection(collection)
-                .whereEqualTo(campo, valor)
-                //.whereEqualTo("status", ConstantHelper.ATIVO)
-                .get();
-    }
-
-    public CollectionReference getAllReference( ) throws Exception {
-        return db.collection(collection);
-
-    }
-
-
-    /**
-     * Update document existent
-     *
-     * @param entity
-     * @param key
-     * @return
-     */
-    public Task<Void> update(final T entity, final String key) {
-        return db.collection(collection).document(key).set(entity, SetOptions.merge());
+        return db.collection(collection).get();
     }
 
     /**
@@ -74,6 +47,4 @@ public abstract class BaseRepository<T> {
     public Task<Void> delete(final String key) {
         return db.collection(collection).document(key).delete();
     }
-
-
 }

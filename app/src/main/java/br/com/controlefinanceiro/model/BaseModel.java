@@ -8,10 +8,8 @@ import java.util.Date;
 public class BaseModel implements Serializable {
 
     public String key;
-    public long status;                 //1 ativo or 2 inativo
 
     @ServerTimestamp
     public Date dataUltimaAtualizacao;
-
 
 }

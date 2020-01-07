@@ -9,7 +9,8 @@ import br.com.controlefinanceiro.model.BaseModel;
 public class Despesa extends BaseModel implements Serializable {
 
     public int mes;
-    public Responsavel responsavel;
+    public int responsavel;
+    public int conta;
     public String descricao;
     public Double valor;
 

@@ -8,25 +8,14 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
             android:title="@string/menu_home" />-->
-        <item
-            android:id="@+id/nav_colaborador"
-            android:icon="@drawable/ic_colaborador"
-            android:visible="false"
-            android:title="@string/despesa" />
     </group>
 
     <item android:title="Cadastros">
         <menu>
             <item
-                android:id="@+id/nav_leitura"
-                android:icon="@drawable/ic_leitura"
-                android:title="@string/responsavel" />
-
-            <item
-                android:id="@+id/nav_relatorio"
-                android:icon="@drawable/ic_relatorio"
-                android:visible="false"
-                android:title="@string/relatorios" />
+                android:id="@+id/nav_despesa"
+                android:icon="@drawable/ic_despesa"
+                android:title="@string/despesa" />
         </menu>
     </item>
 </menu>

@@ -26,8 +26,9 @@ import br.com.controlefinanceiro.viewmodel.BaseViewModel;
 
 public class BaseActivity extends AppCompatActivity {
 
-    String[] mStatus = {ConstantHelper.SELECIONE_STR, ConstantHelper.ATIVO_STR, ConstantHelper.INATIVO_STR};
-    String[] mPerfil = {ConstantHelper.PERFIL_SELECIONE_STR, ConstantHelper.PERFIL_ADM_STR, ConstantHelper.PERFIL_COLABORADOR_STR};
+    String[] mMeses = ConstantHelper.meses;
+    String[] mConta = ConstantHelper.conta;
+    String[] mResponsavel = ConstantHelper.responsavel;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
@@ -114,62 +115,19 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
-    public void hideKeyboard(View view) {
-        final InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        if (imm != null) {
-            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-        }
-    }
-
-    public void spinnerStatus(Spinner spinner) {
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), R.layout.item_spinner_default, mStatus);
+    public void spinnerMeses(Spinner spinner) {
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), R.layout.item_spinner_default, mMeses);
         spinner.setAdapter(adapter);
     }
 
-    public void spinnerPerfil(Spinner spinner) {
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), R.layout.item_spinner_default, mPerfil);
+    public void spinnerResponsavel(Spinner spinner) {
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), R.layout.item_spinner_default, mResponsavel);
         spinner.setAdapter(adapter);
     }
 
-    public int getStatusSpinner(String itemSelected) {
-        if (itemSelected.equalsIgnoreCase(ConstantHelper.ATIVO_STR)) {
-            return ConstantHelper.ATIVO;
-        } else {
-            return ConstantHelper.INATIVO;
-        }
-    }
-
-    public int getPerfilSpinner(String itemSelected) {
-        if (itemSelected.equalsIgnoreCase(ConstantHelper.PERFIL_ADM_STR)) {
-            return ConstantHelper.PERFIL_ADM;
-        } else {
-            return ConstantHelper.PERFIL_COLABORADOR;
-        }
-    }
-
-    public int setSpinner(long itemSelected) {
-
-        if (itemSelected == ConstantHelper.ATIVO || itemSelected == ConstantHelper.PERFIL_ADM) {
-            return 1;
-        } else {
-            if (itemSelected == ConstantHelper.INATIVO || itemSelected == ConstantHelper.PERFIL_COLABORADOR) {
-                return 2;
-            }else{
-                return 0;
-            }
-
-        }
-
-    }
-
-    public boolean validStatus(Spinner mStatus) {
-
-        if (mStatus == null) {
-            return false;
-        } else if (mStatus.getSelectedItemPosition() == 0) {
-            return false;
-        }
-        return true;
+    public void spinnerConta(Spinner spinner) {
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getBaseContext(), R.layout.item_spinner_default, mConta);
+        spinner.setAdapter(adapter);
     }
 
 }
